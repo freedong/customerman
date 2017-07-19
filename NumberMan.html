@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>号码管理</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/login.css">
+
+	<script type="text/javascript" src="js/jquery-1.8.2.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+
+			/* 滑动/展开 */
+			$("div.menu ul li > a.header").click(function(){
+
+				var arrow = $(this).find("span.arrow");
+
+				if(arrow.hasClass("up")){
+					arrow.removeClass("up");
+					arrow.addClass("down");
+				}else if(arrow.hasClass("down")){
+					arrow.removeClass("down");
+					arrow.addClass("up");
+				}
+
+				$(this).parent().find("ul.menu1").slideToggle();
+
+			});
+
+		});
+	</script>
+</head>
+<body>
+	<!-- 左边栏floatLeft -->
+	<div class="menu l_aside floatLeft">
+		<div class="l_name">
+			<img src="images/logo_blue.png" alt="优音通信">
+			<p>欢迎您：梅赛德</p>
+		</div>
+		<ul>
+			<li>
+				<a href="basicInfo.html" class="header">
+					<span class="txt txt_bg1">基本信息</span>
+				</a>
+			</li>
+			<li>
+				<a href="NumberMan.html" class="header bg_1">
+					<span class="txt txt_bg2">号码管理</span>
+				</a>
+			</li>
+			<li>
+				<a href="javascript:void(0);" class="header">
+					<span class="txt txt_bg3">客户管理</span>
+					<span class="arrow down"></span>
+				</a>
+				<ul class="menu1">
+					<li><a href="customer.html"><span>●</span>客户查询</a></li>
+					<li><a href="records.html"><span>●</span>充值记录</a></li>
+					<li><a href="bill.html"><span>●</span>账单查询</a></li>
+					<li class="pb12"><a href="reset.html"><span>●</span>密码重置</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+
+
+	<!-- 右边栏floatRight -->
+	<div class="r_side floatRight">
+		<div class="r_top">
+			<div class="floatLeft">
+				<p class="r_top_p">上次登录时间：2017-07-02  20:20</p>
+			</div>
+			<div class="floatRight">
+				<a href="#" class="r_top_mm">修改密码</a>
+				<a href="#" class="r_top_tc">退出</a>
+			</div>
+			<div class="clear"></div>
+		</div>
+		<div class="n_con">
+			<div class="n_con_hm">
+				<h3>号码查询：</h3>
+				<div class="n_con_hm1 floatLeft">
+					<span>400-</span>
+					<input type="text">
+					<input type="text">
+					<input type="text">
+					<input type="text">
+					<input type="text">
+					<input type="text">
+					<input type="text">
+					<input type="text">
+					<input type="button" value="清除" class="n_qc">
+				</div>
+				<div class="n_con_hm2 floatRight">
+					<span>多号码查询（用英文逗号分隔）:</span>
+					<input type="text">
+					<input type="button" value="查询" class="n_cx">
+				</div>
+				<div class="clear"></div>
+			</div>
+			<div class="n_con_td">
+				<h3>特定查询：</h3>
+				<div class="n_con_td1">
+					<div class="n_con_td1_sp floatLeft">
+						<span>价位：</span>
+					</div>
+					<ul class="n_con_td1_ul floatLeft">
+						<li>3000元以下</li>
+						<li>3000-5000元</li>
+						<li>5000-7000元</li>
+						<li>7000-10000元</li>
+						<li>10000元以上</li>
+					</ul>
+					<div class="n_con_td1_qd floatLeft">
+						<input type="text">
+						<span>-</span>
+						<input type="text">
+						<input type="button" value="确定" class="qued">
+					</div>
+					<div class="clear"></div>
+				</div>
+
+				<div class="n_con_td2">
+					<div class="n_con_td2_sp floatLeft">
+						<span>尾号：</span>
+					</div>
+					<ul class="n_con_td2_ul floatLeft">
+						<li>AAA</li>
+						<li>ABBA</li>
+						<li>ABAB</li>
+						<li>AABB</li>
+						<li>ABC</li>
+						<li>AA</li>
+					</ul>
+					<div class="clear"></div>
+				</div>
+			</div>
+
+
+			<div class="n_con_sx">
+				<h3>筛选条件：</h3>
+				<div class="n_con_sx1">
+					<select class="n_con_sx1_sl1">
+						<option value ="城市">城市</option>
+						<option value ="saab">Saab</option>
+						<option value="opel">Opel</option>
+						<option value="audi">Audi</option>
+					</select>
+					<select class="n_con_sx1_sl1 ml55">
+						<option value ="数字要求">数字要求</option>
+						<option value ="saab">Saab</option>
+						<option value="opel">Opel</option>
+						<option value="audi">Audi</option>
+					</select>
+				</div>
+			</div>
+
+			<div class="n_con_yx">
+				<h3>已选条件：<span>（已选条件顺序取决于筛选条件的选择顺序）</span></h3>
+				<div class="n_con_yx1">
+					<ul class="clearFloat">
+						<li><span>沈阳</span><i>×</i></li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="n_con_lb">
+				<div class="n_con_lb_xz">
+					<input type="button" value="选择导出" class="xz_dc">
+					<input type="button" value="随机导出100条可选号码" class="xz_sj">
+					<label>价格：</label>
+					<select class="xz_sl">
+						<option value="请选择">请选择</option>
+						<option value="1000元以上">1000元以上</option>
+						<option value="1000-3000">1000-3000</option>
+						<option value="3000-5000">3000-5000</option>
+						<option value="5000-7000">5000-7000</option>
+						<option value="7000-10000">7000-10000</option>
+					</select>
+					<label>状态：</label>
+					<select class="xz_sl">
+						<option value="全部">全部</option>
+						<option value="可预占">可预占</option>
+						<option value="可续占">可续占</option>
+						<option value="已释放">已释放</option>
+					</select>
+				</div>
+				<div class="n_con_lb_table">
+					<table>
+						<tbody>
+							<tr>
+								<th>400号码</th>
+								<th>状态</th>
+								<th>是否自属</th>
+								<th>套餐标价</th>
+								<th>运营商</th>
+								<th>操作</th>
+							</tr>
+							<tr>
+								<td>4006003336</td>
+								<td>可预占</td>
+								<td>否</td>
+								<td>15000</td>
+								<td>联通</td>
+								<td>
+									<button class="btn_gg btn_red">预占</button>
+									<button class="btn_gg btn_hs ml15">释放</button>
+								</td>
+							</tr>
+							<tr>
+								<td>4006003336</td>
+								<td>可预占</td>
+								<td>否</td>
+								<td>15000</td>
+								<td>联通</td>
+								<td>
+									<button class="btn_gg btn_red">预占</button>
+									<button class="btn_gg btn_hs ml15">释放</button>
+								</td>
+							</tr>
+							<tr>
+								<td>4006003336</td>
+								<td>可预占</td>
+								<td>否</td>
+								<td>15000</td>
+								<td>联通</td>
+								<td>
+									<button class="btn_gg btn_sl">续占</button>
+									<button class="btn_gg btn_ql ml15">释放</button>
+								</td>
+							</tr>
+							<tr>
+								<td>4006003336</td>
+								<td>可预占</td>
+								<td>否</td>
+								<td>15000</td>
+								<td>联通</td>
+								<td>
+									<button class="btn_gg btn_red">预占</button>
+									<button class="btn_gg btn_hs ml15">释放</button>
+								</td>
+							</tr>
+							<tr>
+								<td>4006003336</td>
+								<td>可预占</td>
+								<td>否</td>
+								<td>15000</td>
+								<td>联通</td>
+								<td>
+									<button class="btn_gg btn_red">预占</button>
+									<button class="btn_gg btn_hs ml15">释放</button>
+								</td>
+							</tr>
+							<tr>
+								<td>4006003336</td>
+								<td>可预占</td>
+								<td>否</td>
+								<td>15000</td>
+								<td>联通</td>
+								<td>
+									<button class="btn_gg btn_red">预占</button>
+									<button class="btn_gg btn_hs ml15">释放</button>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+
+
+	</div>
+	<div class="clear"></div>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>登录页</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/login.css">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+
+	<link rel="stylesheet" type="text/css" href="css/easyui.css">
+	<link rel="stylesheet" type="text/css" href="css/icon.css">
+	<link rel="stylesheet" type="text/css" href="css/demo.css">
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/jquery.easyui.min.js"></script>
+
+
+</head>
+<body>
+	<!-- 顶部栏 -->
+	<div class="top">
+		<div class="top_div">
+			<img src="images/logo.png" alt="优音通信">
+			<span>代理商管理平台</span>
+		</div>
+	</div>
+	
+	<!-- 登录框 -->
+	<div class="login">
+		<form action="" class="form-hor">
+			<div class="form-grop">
+				<input type="text" class="form-control" id="name" name="name" placeholder="用户名">
+				<i class="fa fa-user fa-fw"></i>
+			</div>
+			<div class="form-grop">
+				<input type="password" class="form-control" id="psd" name="psd" placeholder="密码">
+				<i class="fa fa-lock fa-fw"></i>
+			</div>
+			<div class="form-grop">
+				<a href="javascript:void(0)" class="form_a1" onclick="$('#dlg').dialog('open')">忘记密码？</a>
+				<a href="basicInfo.html" class="form_a2">登录</a>
+			</div>
+
+		</form>
+	</div>
+
+
+	<div id="dlg" class="easyui-dialog" title="忘记密码" style="width:80%;height:200px;max-width:320px;padding:10px" data-options="
+			buttons: '#dlg-buttons',
+			closed:true,
+			onResize:function(){
+				$(this).dialog('center');
+			}">
+			<h5>忘记密码</h5>
+		<p>请联系客户经理，完成密码重置。</p>
+	</div>
+	<div id="dlg-buttons">
+		<a href="javascript:void(0)" class="easyui-linkbutton" onclick="javascript:alert('确定')">确定</a>
+	</div>
+
+</body>
+</html>
