@@ -9,10 +9,10 @@
 	<link rel="stylesheet" href="css/reset.css">
 	<link rel="stylesheet" href="css/login.css">
 	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/records.css">
 
 	<link rel="stylesheet" type="text/css" href="css/easyui.css">
 	<link rel="stylesheet" type="text/css" href="css/icon.css">
-	<link rel="stylesheet" type="text/css" href="css/demo.css">
 	<script type="text/javascript" src="js/jquery.min.js"></script>
 	<script type="text/javascript" src="js/jquery.easyui.min.js"></script>
 
@@ -45,20 +45,26 @@
 
 		</form>
 	</div>
+<!-- closable: false, -->
 
-
-	<div id="dlg" class="easyui-dialog" title="忘记密码" style="width:80%;height:200px;max-width:320px;padding:10px" data-options="
-			buttons: '#dlg-buttons',
+	<div id="dlg" class="easyui-dialog pass_dlg1" title="" style="width:80%;height:200px;max-width:320px;padding:10px" data-options="
+			modal:true,
+			closable: false,
 			closed:true,
 			onResize:function(){
 				$(this).dialog('center');
 			}">
 			<h5>忘记密码</h5>
-		<p>请联系客户经理，完成密码重置。</p>
+			<p>请联系客户经理，完成密码重置。</p>
+			<button class="d_btn_qd" onclick="$('#dlg').dialog('close')">确&nbsp;&nbsp;定</button>
 	</div>
-	<div id="dlg-buttons">
-		<a href="javascript:void(0)" class="easyui-linkbutton" onclick="javascript:alert('确定')">确定</a>
-	</div>
+
+
+	<script>
+		$(function(){
+			$('#dlg').parent().addClass('pass_dlg');
+		})
+	</script>
 
 </body>
 </html>

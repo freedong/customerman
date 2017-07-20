@@ -8,13 +8,20 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 	<link rel="stylesheet" href="css/reset.css">
 	<link rel="stylesheet" href="css/login.css">
-
+	<link rel="stylesheet" href="css/records.css">
 	<script type="text/javascript" src="js/jquery-1.8.2.min.js"></script>
+
+
+    <link rel="stylesheet" type="text/css" href="css/easyui.css">
+	<link rel="stylesheet" type="text/css" href="css/icon.css">
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/jquery.easyui.min.js"></script>
+
 	<script type="text/javascript">
 		$(document).ready(function(){
 
 			/* 滑动/展开 */
-			$("div.menu ul li > a.header").click(function(){
+			$("div.menu2 ul li > a.header").click(function(){
 
 				var arrow = $(this).find("span.arrow");
 
@@ -35,7 +42,7 @@
 </head>
 <body>
 	<!-- 左边栏floatLeft -->
-	<div class="menu l_aside floatLeft">
+	<div class="menu2 l_aside floatLeft">
 		<div class="l_name">
 			<img src="images/logo_blue.png" alt="优音通信">
 			<p>欢迎您：梅赛德</p>
@@ -74,7 +81,7 @@
 				<p class="r_top_p">上次登录时间：2017-07-02  20:20</p>
 			</div>
 			<div class="floatRight">
-				<a href="#" class="r_top_mm">修改密码</a>
+				<a href="javascript:void(0)" class="r_top_mm" onclick="$('#dlg').dialog('open')">修改密码</a>
 				<a href="#" class="r_top_tc">退出</a>
 			</div>
 			<div class="clear"></div>
@@ -206,8 +213,8 @@
 								<td>15000</td>
 								<td>联通</td>
 								<td>
-									<button class="btn_gg btn_red">预占</button>
-									<button class="btn_gg btn_hs ml15">释放</button>
+									<button class="btn_gg btn_red" onclick="$('#yz').dialog('open')">预占</button>
+									<button class="btn_gg btn_hs ml15" onclick="$('#sf').dialog('open')">释放</button>
 								</td>
 							</tr>
 							<tr>
@@ -217,8 +224,8 @@
 								<td>15000</td>
 								<td>联通</td>
 								<td>
-									<button class="btn_gg btn_red">预占</button>
-									<button class="btn_gg btn_hs ml15">释放</button>
+									<button class="btn_gg btn_red" onclick="$('#yz').dialog('open')">预占</button>
+									<button class="btn_gg btn_hs ml15" onclick="$('#sf').dialog('open')">释放</button>
 								</td>
 							</tr>
 							<tr>
@@ -228,8 +235,8 @@
 								<td>15000</td>
 								<td>联通</td>
 								<td>
-									<button class="btn_gg btn_sl">续占</button>
-									<button class="btn_gg btn_ql ml15">释放</button>
+									<button class="btn_gg btn_sl" onclick="$('#xz').dialog('open')">续占</button>
+									<button class="btn_gg btn_ql ml15" onclick="$('#sf').dialog('open')">释放</button>
 								</td>
 							</tr>
 							<tr>
@@ -239,8 +246,8 @@
 								<td>15000</td>
 								<td>联通</td>
 								<td>
-									<button class="btn_gg btn_red">预占</button>
-									<button class="btn_gg btn_hs ml15">释放</button>
+									<button class="btn_gg btn_red" onclick="$('#yz').dialog('open')">预占</button>
+									<button class="btn_gg btn_hs ml15" onclick="$('#sf').dialog('open')">释放</button>
 								</td>
 							</tr>
 							<tr>
@@ -250,8 +257,8 @@
 								<td>15000</td>
 								<td>联通</td>
 								<td>
-									<button class="btn_gg btn_red">预占</button>
-									<button class="btn_gg btn_hs ml15">释放</button>
+									<button class="btn_gg btn_red" onclick="$('#yz').dialog('open')">预占</button>
+									<button class="btn_gg btn_hs ml15" onclick="$('#sf').dialog('open')">释放</button>
 								</td>
 							</tr>
 							<tr>
@@ -261,8 +268,8 @@
 								<td>15000</td>
 								<td>联通</td>
 								<td>
-									<button class="btn_gg btn_red">预占</button>
-									<button class="btn_gg btn_hs ml15">释放</button>
+									<button class="btn_gg btn_red" onclick="$('#yz').dialog('open')">预占</button>
+									<button class="btn_gg btn_hs ml15" onclick="$('#sf').dialog('open')">释放</button>
 								</td>
 							</tr>
 						</tbody>
@@ -270,9 +277,116 @@
 				</div>
 			</div>
 		</div>
-
-
 	</div>
 	<div class="clear"></div>
+
+
+
+	<!-- 修改密码对话框 -->
+	<div id="dlg" class="easyui-dialog pass_dlg2" title="修改密码" style="width:80%;height:315px;max-width:460px;padding:10px" data-options="
+			modal:true,
+			closed:true,
+			onResize:function(){
+				$(this).dialog('center');
+			}">
+			<div class="inp_group">
+				<label>旧&nbsp;&nbsp;&nbsp;密&nbsp;&nbsp;&nbsp;&nbsp;码：</label>
+				<input type="text">
+			</div>
+			<div class="inp_group">
+				<label>新&nbsp;&nbsp;&nbsp;密&nbsp;&nbsp;&nbsp;&nbsp;码：</label>
+				<input type="text">
+			</div>
+			<div class="inp_group">
+				<label>确认新密码：</label>
+				<input type="text">
+			</div>
+			<div class="btn_group">
+				<button class="d_btn_qd1" onclick="javascript:alert('确定')">确&nbsp;&nbsp;定</button>
+			<button class="d_btn_qx ml40" onclick="$('#dlg').dialog('close')">取&nbsp;&nbsp;消</button>
+			</div>
+			
+	</div>
+	<!-- 预占 -->
+	<div id="yz" class="easyui-dialog pass_dlg2 yz" title="预占" style="width:80%;height:225px;max-width:360px;padding:10px" data-options="
+			modal:true,
+			closed:true,
+			onResize:function(){
+				$(this).dialog('center');
+			}">
+			<label>请填写预定价：</label>
+			<input type="text">
+			<p class="mt20">备注：预定价不能低于套餐价5000.00</p>
+			<div class="btn_group">
+				<button class="d_btn_qd1" onclick="javascript:alert('提交')">提&nbsp;&nbsp;交</button>
+			<button class="d_btn_qx ml20" onclick="$('#yz').dialog('close')">取&nbsp;&nbsp;消</button>
+			</div>
+			
+	</div>
+
+	<!-- 续占 -->
+	<div id="xz" class="easyui-dialog pass_dlg3 xz" title="续占" style="width:80%;height:290px;max-width:360px;padding:10px" data-options="
+			modal:true,
+			closed:true,
+			onResize:function(){
+				$(this).dialog('center');
+			}">
+			<h5>您正在执行续占操作</h5>
+			<div class="xz_sel">
+				<label>请选择续占理由：</label>
+				<select name="" id="" class="xz_sel1">
+					<option value="请选择">请选择</option>
+					<option value="好">好</option>
+					<option value="优">优</option>
+					<option value="良">良</option>
+				</select>
+			</div>
+			<div class="xz_sel">
+				<label>续&nbsp;&nbsp;&nbsp;占&nbsp;&nbsp;&nbsp;&nbsp;天&nbsp;&nbsp;&nbsp;数：</label>
+				<select name="" id="" class="xz_sel1">
+					<option value="请选择">请选择</option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+				</select>
+			</div>
+			<div>
+				<input type="button" class="xz_sc" value="点击上传证件">
+			</div>
+			<button class="d_btn_qd" onclick="$('#xz').dialog('close')">确&nbsp;&nbsp;定</button>
+			
+	</div>
+
+
+	<!-- 释放 -->
+	<div id="sf" class="easyui-dialog pass_dlg3 sf" title="释放" style="width:80%;height:235px;max-width:360px;padding:10px" data-options="
+			modal:true,
+			closed:true,
+			onResize:function(){
+				$(this).dialog('center');
+			}">
+			<p>释放后，可能会被其他用户预占，<br>是否确认释放？</p>
+			<div class="btn_group">
+				<button class="d_btn_qd1" onclick="javascript:alert('提交')">提&nbsp;&nbsp;交</button>
+			<button class="d_btn_qx ml20" onclick="$('#sf').dialog('close')">取&nbsp;&nbsp;消</button>
+			</div>
+			
+	</div>
+
+	
+	
+	<script>
+		$(function(){
+			$('#dlg').parent().addClass('pass_dlg');
+			$('#dlg').prev().addClass('change_pass');
+			$('#yz').parent().addClass('pass_dlg');
+			$('#yz').prev().addClass('change_pass');
+			$('#xz').parent().addClass('pass_dlg');
+			$('#xz').prev().addClass('change_pass');
+			$('#sf').parent().addClass('pass_dlg');
+			$('#sf').prev().addClass('change_pass');
+		})
+	</script>
+
 </body>
 </html>

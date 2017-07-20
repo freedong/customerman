@@ -10,11 +10,18 @@
 	<link rel="stylesheet" href="css/login.css">
 
 	<script type="text/javascript" src="js/jquery-1.8.2.min.js"></script>
+
+	<link rel="stylesheet" href="css/records.css">
+    <link rel="stylesheet" type="text/css" href="css/easyui.css">
+	<link rel="stylesheet" type="text/css" href="css/icon.css">
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/jquery.easyui.min.js"></script>
+
 	<script type="text/javascript">
 		$(document).ready(function(){
 
 			/* 滑动/展开 */
-			$("div.menu ul li > a.header").click(function(){
+			$("div.menu2 ul li > a.header").click(function(){
 
 				var arrow = $(this).find("span.arrow");
 
@@ -35,7 +42,7 @@
 </head>
 <body>
 	<!-- 左边栏floatLeft -->
-	<div class="menu l_aside floatLeft">
+	<div class="menu2 l_aside floatLeft">
 		<div class="l_name">
 			<img src="images/logo_blue.png" alt="优音通信">
 			<p>欢迎您：梅赛德</p>
@@ -73,7 +80,7 @@
 				<p class="r_top_p">上次登录时间：2017-07-02  20:20</p>
 			</div>
 			<div class="floatRight">
-				<a href="#" class="r_top_mm">修改密码</a>
+				<a href="javascript:void(0);" class="r_top_mm" onclick="$('#dlg').dialog('open')">修改密码</a>
 				<a href="#" class="r_top_tc">退出</a>
 			</div>
 			<div class="clear"></div>
@@ -107,7 +114,7 @@
 								<td>综合</td>
 								<td>15454224245</td>
 								<td>
-									<button class="btn_blue">密码重置</button>
+									<button class="btn_blue" onclick="$('#mmcz').dialog('open')">密码重置</button>
 								</td>
 							</tr>
 							<tr>
@@ -116,7 +123,7 @@
 								<td>综合</td>
 								<td>15454224245</td>
 								<td>
-									<button class="btn_blue">密码重置</button>
+									<button class="btn_blue" onclick="$('#mmcz').dialog('open')">密码重置</button>
 								</td>
 							</tr>
 							<tr>
@@ -125,7 +132,7 @@
 								<td>综合</td>
 								<td>15454224245</td>
 								<td>
-									<button class="btn_blue">密码重置</button>
+									<button class="btn_blue" onclick="$('#mmcz').dialog('open')">密码重置</button>
 								</td>
 							</tr>
 						</tbody>
@@ -133,5 +140,55 @@
 				</div>
 			</div>
 		</div>
+	</div>
+
+
+	<div class="clear"></div>
+
+	<!-- 修改密码对话框 -->
+	<div id="dlg" class="easyui-dialog pass_dlg2" title="修改密码" style="width:80%;height:315px;max-width:460px;padding:10px" data-options="
+			modal:true,
+			closed:true,
+			onResize:function(){
+				$(this).dialog('center');
+			}">
+			<div class="inp_group">
+				<label>旧&nbsp;&nbsp;&nbsp;密&nbsp;&nbsp;&nbsp;&nbsp;码：</label>
+				<input type="text">
+			</div>
+			<div class="inp_group">
+				<label>新&nbsp;&nbsp;&nbsp;密&nbsp;&nbsp;&nbsp;&nbsp;码：</label>
+				<input type="text">
+			</div>
+			<div class="inp_group">
+				<label>确认新密码：</label>
+				<input type="text">
+			</div>
+			<div class="btn_group">
+				<button class="d_btn_qd1" onclick="javascript:alert('确定')">确&nbsp;&nbsp;定</button>
+			<button class="d_btn_qx ml40" onclick="$('#dlg').dialog('close')">取&nbsp;&nbsp;消</button>
+			</div>
+	</div>
+
+	<!-- 密码重置对话框 -->
+	<div id="mmcz" class="easyui-dialog pass_dlg2 mmcz" title="提示" style="width:80%;height:220px;max-width:310px;padding:10px" data-options="
+			modal:true,
+			closed:true,
+			onResize:function(){
+				$(this).dialog('center');
+			}">
+			<h3>重置成功！</h3>
+			<p>密码为——<span>65582</span></p>
+			<button class="d_btn_qd" onclick="$('#xz').dialog('close')">确&nbsp;&nbsp;定</button>
+	</div>
+
+	<script>
+		$(function(){
+			$('#dlg').parent().addClass('pass_dlg');
+			$('#dlg').prev().addClass('change_pass');
+			$('#mmcz').parent().addClass('pass_dlg');
+			$('#mmcz').prev().addClass('change_pass');
+		})
+	</script>
 </body>
 </html>

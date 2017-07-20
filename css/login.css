@@ -112,25 +112,25 @@
 	background-color: #41485c;
 }
 
-div.menu{
+div.menu2{
 	width: 200px;
 }
 
-div.menu .l_name{
+div.menu2 .l_name{
 	text-align: center;
 	margin-bottom: 25px;
 }
 
-div.menu .l_name p{
+div.menu2 .l_name p{
 	color: #adc0d7;
 	font-size: 12px;
 }
 
-div.menu ul li a.header{
+div.menu2 ul li a.header{
 	display: block;
 }
 
-div.menu ul li a.header{
+div.menu2 ul li a.header{
 	// padding: 12px;
 	// border-bottom: 1px solid #396e9f;
 	// background-color: red;
@@ -142,12 +142,12 @@ div.menu ul li a.header{
 	text-align: center;
 }
 
-div.menu ul li a.header.bg_1{
+div.menu2 ul li a.header.bg_1{
     background-color: #2d3241;
     border-left: 4px solid #30a6f1;	
 }
 
-div.menu ul li a.header .txt{
+div.menu2 ul li a.header .txt{
 	// padding-left: 24px;
 	font-size: 14px;
 	color: #ffffff;
@@ -156,35 +156,35 @@ div.menu ul li a.header .txt{
 	background: url(../images/t_sprit.png) no-repeat;
 }
 
-div.menu ul li a.header.bg_1 .txt.txt_bg1{
+div.menu2 ul li a.header.bg_1 .txt.txt_bg1{
 	background-position: 31px 8px;
 }
-div.menu ul li a.header.bg_1 .txt.txt_bg2{
+div.menu2 ul li a.header.bg_1 .txt.txt_bg2{
 	background-position: 31px -31px;
 }
-div.menu ul li a.header.bg_1 .txt.txt_bg3{
+div.menu2 ul li a.header.bg_1 .txt.txt_bg3{
 	background-position: 29px -68px;
 }
 
 
-div.menu ul li a.header .txt.txt_bg1{
+div.menu2 ul li a.header .txt.txt_bg1{
 	background-position: 35px 8px;
 }
-div.menu ul li a.header .txt.txt_bg2{
+div.menu2 ul li a.header .txt.txt_bg2{
 	background-position: 35px -31px;
 }
-div.menu ul li a.header .txt.txt_bg3{
+div.menu2 ul li a.header .txt.txt_bg3{
 	background-position: 33px -68px;
 }
 
-div.menu ul li a.header .arrow.down{
+div.menu2 ul li a.header .arrow.down{
 	background: url(../images/arrow.png) no-repeat;
 }
 
-div.menu ul li a.header .arrow.up{
-	background-image: url(../images/);
+div.menu2 ul li a.header .arrow.up{
+	background: url(../images/arrow1.png) no-repeat;
 }
-div.menu ul li a.header .arrow{
+div.menu2 ul li a.header .arrow{
 	display: block;
 	width: 16px;
 	height: 16px;
@@ -194,10 +194,10 @@ div.menu ul li a.header .arrow{
 	margin-right: 20px;
 }
 
-div.menu ul li ul.menu1{
+div.menu2 ul li ul.menu1{
 	border-top: 1px solid #41485c;
 }
-div.menu ul li ul.menu1 li{
+div.menu2 ul li ul.menu1 li{
 	background-color: #2d3241;
 	padding-top: 12px;
 	// border-bottom: 1px solid #dcdcdc;
@@ -206,7 +206,7 @@ div.menu ul li ul.menu1 li{
 	text-align: center;
 }
 
-div.menu ul li ul.menu1 li a{
+div.menu2 ul li ul.menu1 li a{
 	display: inline-block;
 	width: 100px;
 	height: 25px;
@@ -216,15 +216,15 @@ div.menu ul li ul.menu1 li a{
 	font-size: 14px;
 	border-radius: 15px;
 }
-div.menu ul li ul.menu1 li a.selected{
+div.menu2 ul li ul.menu1 li a.selected{
 	background-color: #1f2433;
 }
-div.menu ul li ul.menu1 li a span{
+div.menu2 ul li ul.menu1 li a span{
 	color: #ff0066;
 	padding-right: 6px;
 }
 
-div.menu ul li ul.menu1 {
+div.menu2 ul li ul.menu1 {
 	display: none;
 }
 // div.menu ul li ul.menu1 li.selected {
