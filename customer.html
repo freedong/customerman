@@ -69,11 +69,16 @@
 					<li class="pb12"><a href="reset.html"><span>●</span>密码重置</a></li>
 				</ul>
 			</li>
+			<li>
+				<a href="consump.html" class="header">
+					<span class="txt txt_bg2">消费记录</span>
+				</a>
+			</li>
 		</ul>
 	</div>
 
 	<!-- 右边栏floatRight -->
-	<div class="r_side floatRight">
+	<div class="r_side floatLeft">
 		<div class="r_top">
 			<div class="floatLeft">
 				<p class="r_top_p">上次登录时间：2017-07-02  20:20</p>
@@ -107,7 +112,7 @@
 						<span>到期预警</span>
 					</div>
 				</div>
-				<div class="cx_table">
+				<!-- <div class="cx_table">
 					<table>
 						<tbody>
 							<tr>
@@ -203,10 +208,52 @@
 									<button class="btn_gg btn_red ml15" onclick="$('#cz').dialog('open')">充值</button>
 								</td>
 							</tr>
-
+				
 						</tbody>
 					</table>
-				</div>
+				</div> -->
+				<div class="cus_data">
+			<table id="dg" title="" style="width:960px;height:450px"
+				data-options="rownumbers:true,singleSelect:true,pagination:true,url:'datagrid_data3.json',method:'get'">
+				<thead>
+					<tr>
+					<th data-options="field:'imagesid',width:80,height:38,align:'center',formatter:callme">预警</th>
+						<th data-options="field:'productid',width:160,height:38,align:'center'">客户名称</th>
+						<th data-options="field:'itemid',width:160,height:38,align:'center'">号码</th>
+						<th data-options="field:'listprice',width:80,height:38,align:'center'">号码状态</th>
+						<th data-options="field:'unitcost',width:140,height:38,align:'center'">余额</th>
+						<th data-options="field:'attr1',width:151,height:38,align:'center'">到期时间</th>
+						<th data-options="field:'status',formatter:operation,width:161,height:38,align:'center'">操作</th>
+						<!-- <th field="status" formatter="sort_format" width="100">sort</th> -->  
+					</tr>
+				</thead>
+			</table>
+			<script type="text/javascript">
+				$(function(){
+			var pager = $('#dg').datagrid().datagrid('getPager');	
+			// get the pager of datagrid
+			pager.pagination({
+				/*buttons:[{
+					iconCls:'icon-search',
+					handler:function(){
+						alert('search');
+					}
+				},{
+					iconCls:'icon-add',
+					handler:function(){
+						alert('add');
+					}
+				},{
+					iconCls:'icon-edit',
+					handler:function(){
+						alert('edit');
+					}
+				}]*/
+			});	
+		
+		})
+	</script>
+</div>
 			</div>
 		</div>
 	</div>
@@ -309,26 +356,76 @@
 
 
 	<!-- 充值对话框 -->
-	<div id="cz" class="easyui-dialog pass_dlg2 cz" title="充值" style="width:80%;height:315px;max-width:460px;padding:10px" data-options="
+	<div id="cz" class="easyui-dialog pass_dlg2 cz" title="充值" style="width:80%;height:230px;max-width:490px;padding:10px" data-options="
 			modal:true,
 			closed:true,
 			onResize:function(){
 				$(this).dialog('center');
 			}">
-			
+			<div class="cz_lx">
+				<label>充值类型：</label>
+				<select name="" id="" class="cz_lx_se">
+					<option value="套餐外充值">套餐外充值</option>
+					<option value="套餐外充值">套餐外充值</option>
+					<option value="套餐外充值">套餐外充值</option>
+					<option value="套餐外充值">套餐外充值</option>
+				</select>
+			</div>
+			<div class="cz_je">
+				<label>充值金额：</label>
+				<input type="text">
+				<span>元<i>*</i></span>
+				<label class="ml30">优音扣款：</label>
+				<input type="text">
+				<span>元<i>*</i></span>
+			</div>
+			<div class="cz_ye">
+				<span>客户余额：</span>
+				<span>60000元</span>
+			</div>
+			<div class="btn_group">
+				<button class="d_btn_qd1 ml90" onclick="$('#czwc').dialog('open')">确&nbsp;&nbsp;定</button>
+			<button class="d_btn_qx ml40" onclick="$('#cz').dialog('close')">取&nbsp;&nbsp;消</button>
+			</div>
 
 	</div>
 
 
+	<!-- 充值完成对话框 -->
+	<div id="czwc" class="easyui-dialog pass_dlg1 czwc" title="" style="width:80%;height:170px;max-width:175px;padding:10px" data-options="
+			modal:true,
+			closable: false,
+			closed:true,
+			onResize:function(){
+				$(this).dialog('center');
+			}">
+			<img src="images/czwc.png" alt="充值完成">
+			<h5>充值完成</h5>
+	</div>
+
+
 	<!-- 预警设置对话框 -->
-	<div id="yjsz" class="easyui-dialog pass_dlg2 yjsz" title="预警设置" style="width:80%;height:315px;max-width:460px;padding:10px" data-options="
+	<div id="yjsz" class="easyui-dialog pass_dlg2 yjsz" title="预警设置" style="width:80%;height:225px;max-width:360px;padding:10px" data-options="
 			modal:true,
 			closed:true,
 			onResize:function(){
 				$(this).dialog('center');
 			}">
-			
-			
+			<div class="yjsz_dq">
+				<label>到期预警：</label>
+				<input type="text">
+				<input type="text">
+			</div>
+			<div class="yjsz_ye">
+				<label>预警余额：</label>
+				<input type="text">
+				<span>元</span>
+			</div>
+
+			<div class="btn_group">
+				<button class="d_btn_qd1 ml25" onclick="javascript:alert('确定')">确&nbsp;&nbsp;定</button>
+			<button class="d_btn_qx ml40" onclick="$('#yjsz').dialog('close')">取&nbsp;&nbsp;消</button>
+			</div>
 	</div>
 
 
@@ -344,7 +441,20 @@
 			$('#cz').prev().addClass('change_pass');
 			$('#yjsz').parent().addClass('pass_dlg');
 			$('#yjsz').prev().addClass('change_pass');
+			$('#czwc').parent().addClass('pass_dlg');
 		})
+
+		function operation() {                            
+			return "<button class='btn_gg btn_ql' onclick='$(\"#xq\").dialog(\"open\")'>详情</button><button class='btn_gg btn_red ml15' onclick='$(\"#cz\").dialog(\"open\")'>充值</button>";
+		}
+
+		function callme(value,row,index) 
+		{    
+			if(row.imagesid==0)                        
+				return "<img class='mt5' src='images/b_jq_red.png'>";
+			if(row.imagesid==1)
+				return "<img class='mt5' src='images/c_dq.png'>";
+		}
 	</script>
 </body>
 </html>

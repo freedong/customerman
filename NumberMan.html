@@ -195,7 +195,7 @@
 						<option value="已释放">已释放</option>
 					</select>
 				</div>
-				<div class="n_con_lb_table">
+				<!-- <div class="n_con_lb_table">
 					<table>
 						<tbody>
 							<tr>
@@ -274,7 +274,49 @@
 							</tr>
 						</tbody>
 					</table>
-				</div>
+				</div> -->
+
+				<div class="num_data">
+			<table id="dg" title="" style="width:960px;height:450px"
+				data-options="rownumbers:true,singleSelect:true,pagination:true,url:'datagrid_data2.json',method:'get'">
+				<thead>
+					<tr>
+						<th data-options="field:'itemid',width:160,height:38,align:'center'">400号码</th>
+						<th data-options="field:'productid',width:160,height:38,align:'center'">状态</th>
+						<th data-options="field:'listprice',width:140,height:38,align:'center'">是否自属</th>
+						<th data-options="field:'unitcost',width:160,height:38,align:'center'">套餐标价</th>
+						<th data-options="field:'attr1',width:151,height:38,align:'center'">运营商</th>
+						<th data-options="field:'status',width:161,height:38,align:'center'">操作</th>
+						<!-- <th field="status" formatter="sort_format" width="100">sort</th> -->  
+					</tr>
+				</thead>
+			</table>
+			<script type="text/javascript">
+				$(function(){
+			var pager = $('#dg').datagrid().datagrid('getPager');	
+			// get the pager of datagrid
+			pager.pagination({
+				/*buttons:[{
+					iconCls:'icon-search',
+					handler:function(){
+						alert('search');
+					}
+				},{
+					iconCls:'icon-add',
+					handler:function(){
+						alert('add');
+					}
+				},{
+					iconCls:'icon-edit',
+					handler:function(){
+						alert('edit');
+					}
+				}]*/
+			});	
+		
+		})
+	</script>
+</div>
 			</div>
 		</div>
 	</div>
@@ -385,6 +427,11 @@
 			$('#xz').prev().addClass('change_pass');
 			$('#sf').parent().addClass('pass_dlg');
 			$('#sf').prev().addClass('change_pass');
+
+
+			// function operation() {                            
+			// 	return "<button class='btn_gg btn_red'>预占</button><button class='btn_gg btn_hs ml15'>释放</button>";
+			// }
 		})
 	</script>
 

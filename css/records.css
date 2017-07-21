@@ -311,3 +311,162 @@
 	font-size: 16px;
 	color: #ff0066;
 } 
+
+
+.cz{
+	text-align: left!important;
+}
+
+.cz_lx{
+	margin-left: 10px;
+}
+.cz_lx label{
+	font-size: 16px;
+	color: #666666;
+}
+
+.cz_lx .cz_lx_se{
+	font-size: 14px;
+	color: #999999;
+	width: 115px;
+	height: 24px;
+	border-radius: 4px;
+	border: 1px solid #e5e5e5;
+}
+
+.cz_je{
+	margin-top: 8px;
+	margin-left: 10px;
+}
+.cz_je label{
+	font-size: 16px;
+	color: #666666;
+}
+
+.cz_je input{
+	font-size: 14px;
+	color: #999999;
+	width: 75px;
+	height: 24px;
+	border-radius: 4px;
+	border: 1px solid #e5e5e5;
+}
+
+.cz_je span{
+	font-size: 14px;
+	color: #999999;
+	margin-left: 8px;
+}
+.cz_je span i{
+	font-style: normal;
+	color: #ff0000;
+	font-size: 14px;
+	display: inline-block;
+	margin-left: 3px;
+}
+.cz_ye{
+	margin-left: 10px;
+	margin-top: 8px;
+}
+.cz_ye span{
+	font-size: 16px;
+	color: #41485c;
+}
+
+.yjsz{
+	text-align: left!important;
+}
+.yjsz_dq{
+	margin-left: 8px;
+	margin-top: 15px;
+}
+.yjsz_dq label{
+	color: #666666;
+	font-size: 16px;
+}
+
+.yjsz_dq input{
+	color: #999999;
+	font-size: 14px;
+	width: 75px;
+	height: 24px;
+	border-radius: 4px;
+	border: 1px solid #e5e5e5;
+}
+.yjsz_ye{
+	margin-left: 8px;
+	margin-top: 15px;
+}
+.yjsz_ye label{
+	color: #666666;
+	font-size: 16px;
+}
+.yjsz_ye input{
+	color: #999999;
+	font-size: 14px;
+	width: 75px;
+	height: 24px;
+	border-radius: 4px;
+	border: 1px solid #e5e5e5;
+}
+.yjsz_ye span{
+	color: #999999;
+	font-size: 14px;
+	margin-left: 5px;
+}
+
+.czwc img{
+	margin-top: 20px;
+}
+.czwc h5{
+	margin-top: 10px!important;
+}
+
+
+/* 表格 */
+.re_data{
+	margin-left: 40px;
+    margin-bottom: 100px;
+    margin-top: 20px;
+}
+
+.num_data{
+    margin-bottom: 100px;
+    margin-top: 20px;
+}
+
+.cus_data{
+    margin-bottom: 100px;
+    margin-top: 20px;
+}
+.cons_data{
+    margin-bottom: 100px;
+    margin-top: 20px;
+}
+
+.res_data{
+    margin-bottom: 100px;
+    margin-top: 20px;
+}
+
+/* 修改源文件 */
+.datagrid-btable tr:nth-child(odd){
+	background-color: #eef4f7;
+}
+.datagrid-btable tr:nth-child(even){
+	background-color: #ffffff;
+}
+.datagrid-header-row{
+	background-color: #ffffff;
+}
+.datagrid-btable tr:nth-child(odd) .datagrid-td-rownumber{
+	background-color: #eef4f7!important;
+	background: #eef4f7!important;
+}
+.datagrid-btable tr:nth-child(even) .datagrid-td-rownumber{
+	background-color: #ffffff!important;
+	background: #ffffff!important;
+}
+.panel-body{
+	border-color: #e5e5e5!important;
+}

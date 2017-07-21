@@ -110,6 +110,7 @@
 	height: 100%;
 	overflow: hidden;
 	background-color: #41485c;
+	z-index: 99;
 }
 
 div.menu2{
@@ -232,14 +233,16 @@ div.menu2 ul li ul.menu1 {
 // }
 
 .r_side{
-	position: fixed;
+	/* position: fixed;
 	top: 0px;
-	left: 200px;
+	left: 200px; */
 	height: 100%;
-	width: 95%;
+	/* width: 95%; */
+	width: 89%;
 	min-width: 1000px;
 	background-color: #ffffff;
-	overflow-y: scroll;
+	/* overflow-y: scroll; */
+	margin-left: 200px;
 }
 
 /* 右边顶部栏 */
@@ -1215,4 +1218,12 @@ div.menu2 ul li ul.menu1 {
 .fenye{
 	height: 50px;
 	background-color: #d9e4eb;
+}
+
+
+/* 消费记录 */
+.consu{
+	width: 1000px;
+	height: auto;
+	margin-left: 40px;
 }

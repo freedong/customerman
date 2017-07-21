@@ -103,7 +103,7 @@
 				</select>
 				<button class="gg_cx ml20">查询</button>
 			</div>
-			<div class="bi_con_table">
+			<!-- <div class="bi_con_table">
 				<table>
 					<tbody>
 						<tr>
@@ -195,7 +195,59 @@
 				<div class="fenye">
 					
 				</div>
-			</div>
+			</div> -->
+			<div class="cus_data">
+			<table id="dg" title="" style="width:960px;height:450px"
+				data-options="rownumbers:true,singleSelect:true,pagination:true,url:'datagrid_data5.json',method:'get'">
+				<thead>
+					<tr>
+						<th data-options="field:'productid',width:80,height:38,align:'center'">单位名称</th>
+						<th data-options="field:'itemid',width:160,height:38,align:'center'">400号码</th>
+						<th data-options="field:'attr1',width:160,height:38,align:'center'">账期</th>
+						<th data-options="field:'listprice',width:80,height:38,align:'center'">阶段</th>
+						<th data-options="field:'unitcost',width:140,height:38,align:'center'">优惠后市话</th>
+						<th data-options="field:'imagesid',width:151,height:38,align:'center'">优惠后长途</th>
+						<th data-options="field:'status',width:161,height:38,align:'center'">优惠后低消</th>
+						<th data-options="field:'productname',width:161,height:38,align:'center'">挂机数量</th>
+						<th data-options="field:'lhnum',width:161,height:38,align:'center'">漏话数量</th>
+						<th data-options="field:'qfnum',width:161,height:38,align:'center'">群发数量</th>
+						<th data-options="field:'dxznum',width:161,height:38,align:'center'">短信总数量</th>
+						<th data-options="field:'yhqsh',width:161,height:38,align:'center'">优惠前市话</th>
+						<th data-options="field:'yhqct',width:161,height:38,align:'center'">优惠前长途</th>
+						<th data-options="field:'yhqdx',width:161,height:38,align:'center'">优惠前低消</th>
+						<th data-options="field:'thzfy',width:161,height:38,align:'center'">通话总费用</th>
+						<th data-options="field:'dxzfy',width:161,height:38,align:'center'">短信总费用</th>
+						<th data-options="field:'ywzfy',width:161,height:38,align:'center'">业务总费用</th>
+						<th data-options="field:'hjzfy',width:161,height:38,align:'center'">合计总费用</th>
+					</tr>
+				</thead>
+			</table>
+			<script type="text/javascript">
+				$(function(){
+			var pager = $('#dg').datagrid().datagrid('getPager');	
+			// get the pager of datagrid
+			pager.pagination({
+				/*buttons:[{
+					iconCls:'icon-search',
+					handler:function(){
+						alert('search');
+					}
+				},{
+					iconCls:'icon-add',
+					handler:function(){
+						alert('add');
+					}
+				},{
+					iconCls:'icon-edit',
+					handler:function(){
+						alert('edit');
+					}
+				}]*/
+			});	
+		
+		})
+	</script>
+</div>
 		</div>
 	</div>
 

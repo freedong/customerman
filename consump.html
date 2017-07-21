@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>充值记录</title>
+	<title>消费记录</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no"/>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
@@ -11,12 +11,11 @@
 
 	<script type="text/javascript" src="js/jquery-1.8.2.min.js"></script>
 
-	<link rel="stylesheet" href="css/records.css">
+    <link rel="stylesheet" href="css/records.css">
     <link rel="stylesheet" type="text/css" href="css/easyui.css">
 	<link rel="stylesheet" type="text/css" href="css/icon.css">
 	<script type="text/javascript" src="js/jquery.min.js"></script>
 	<script type="text/javascript" src="js/jquery.easyui.min.js"></script>
-
 	<script type="text/javascript">
 		$(document).ready(function(){
 
@@ -59,7 +58,7 @@
 				</a>
 			</li>
 			<li>
-				<a href="javascript:void(0);" class="header bg_1">
+				<a href="javascript:void(0);" class="header">
 					<span class="txt txt_bg3">客户管理</span>
 					<span class="arrow down"></span>
 				</a>
@@ -67,14 +66,19 @@
 					<li><a href="customer.html"><span>●</span>客户查询</a></li>
 					<li><a href="records.html"><span>●</span>充值记录</a></li>
 					<li><a href="bill.html"><span>●</span>账单查询</a></li>
-					<li class="pb12"><a href="reset.html" class="selected"><span>●</span>密码重置</a></li>
+					<li class="pb12"><a href="reset.html"><span>●</span>密码重置</a></li>
 				</ul>
+			</li>
+			<li>
+				<a href="consump.html" class="header bg_1">
+					<span class="txt txt_bg2">消费记录</span>
+				</a>
 			</li>
 		</ul>
 	</div>
 
 	<!-- 右边栏floatRight -->
-	<div class="r_side floatRight">
+	<div class="r_side floatLeft">
 		<div class="r_top">
 			<div class="floatLeft">
 				<p class="r_top_p">上次登录时间：2017-07-02  20:20</p>
@@ -85,106 +89,17 @@
 			</div>
 			<div class="clear"></div>
 		</div>
-		<div class="res_con">
-			<div class="res_con_mm">
-				<h3 class="xhx">密码重置：</h3>
-				<div class="res_con_mm1">
-					<label>客户名称：</label>
-					<input type="text" class="mm_input">
-					<label class="ml30">号码: </label>
-					<input type="text" class="mm_input1">
-					<button class="gg_cx ml20">查询</button>
-				</div>
+		<div class="consu">
+			<div class="consu_tj">
+				<h3 class="xhx">条件查询：</h3>
 			</div>
-			<div class="res_con_cx">
-				<h3 class="xhx">查询列表：</h3>
-				<!-- <div class="res_con_cx1">
-					<table>
-						<tbody>
-							<tr>
-								<th>客户名称</th>
-								<th>号码</th>
-								<th>联系人</th>
-								<th>联系方式</th>
-								<th>操作</th>
-							</tr>
-							<tr>
-								<td>演示号码</td>
-								<td>4000000011</td>
-								<td>综合</td>
-								<td>15454224245</td>
-								<td>
-									<button class="btn_blue" onclick="$('#mmcz').dialog('open')">密码重置</button>
-								</td>
-							</tr>
-							<tr>
-								<td>演示号码</td>
-								<td>4000000011</td>
-								<td>综合</td>
-								<td>15454224245</td>
-								<td>
-									<button class="btn_blue" onclick="$('#mmcz').dialog('open')">密码重置</button>
-								</td>
-							</tr>
-							<tr>
-								<td>演示号码</td>
-								<td>4000000011</td>
-								<td>综合</td>
-								<td>15454224245</td>
-								<td>
-									<button class="btn_blue" onclick="$('#mmcz').dialog('open')">密码重置</button>
-								</td>
-							</tr>
-						</tbody>
-					</table>
-				</div>
-				 -->
-				<div class="res_data">
-			<table id="dg" title="" style="width:960px;height:450px"
-				data-options="rownumbers:true,singleSelect:true,pagination:true,url:'datagrid_data4.json',method:'get'">
-				<thead>
-					<tr>
-						<th data-options="field:'productid',width:190,align:'center'">客户名称</th>
-						<th data-options="field:'itemid',width:190,align:'center'">号码</th>
-						<th data-options="field:'listprice',width:182,align:'center'">联系人</th>
-						<th data-options="field:'unitcost',width:180,align:'center'">联系方式</th>
-						<th data-options="field:'status',width:190,align:'center'">操作</th>
-						<!-- <th field="status" formatter="sort_format" width="100">sort</th> -->  
-					</tr>
-				</thead>
-			</table>
-			<script type="text/javascript">
-				$(function(){
-			var pager = $('#dg').datagrid().datagrid('getPager');	
-			// get the pager of datagrid
-			pager.pagination({
-				/*buttons:[{
-					iconCls:'icon-search',
-					handler:function(){
-						alert('search');
-					}
-				},{
-					iconCls:'icon-add',
-					handler:function(){
-						alert('add');
-					}
-				},{
-					iconCls:'icon-edit',
-					handler:function(){
-						alert('edit');
-					}
-				}]*/
-			});	
-		
-		})
-	</script>
-</div>
+			<div class="consu_xf">
+				<h3 class="xhx">消费详情：</h3>
 			</div>
 		</div>
 	</div>
-
-
 	<div class="clear"></div>
+
 
 	<!-- 修改密码对话框 -->
 	<div id="dlg" class="easyui-dialog pass_dlg2" title="修改密码" style="width:80%;height:315px;max-width:460px;padding:10px" data-options="
@@ -211,25 +126,26 @@
 			</div>
 	</div>
 
-	<!-- 密码重置对话框 -->
-	<div id="mmcz" class="easyui-dialog pass_dlg2 mmcz" title="提示" style="width:80%;height:220px;max-width:310px;padding:10px" data-options="
-			modal:true,
-			closed:true,
-			onResize:function(){
-				$(this).dialog('center');
-			}">
-			<h3>重置成功！</h3>
-			<p>密码为——<span>65582</span></p>
-			<button class="d_btn_qd" onclick="$('#mmcz').dialog('close')">确&nbsp;&nbsp;定</button>
-	</div>
+
+	
+
+	
+
+
 
 	<script>
 		$(function(){
 			$('#dlg').parent().addClass('pass_dlg');
 			$('#dlg').prev().addClass('change_pass');
-			$('#mmcz').parent().addClass('pass_dlg');
-			$('#mmcz').prev().addClass('change_pass');
+			$('#xq').parent().addClass('pass_dlg');
+			$('#xq').prev().addClass('change_pass');
+			$('#cz').parent().addClass('pass_dlg');
+			$('#cz').prev().addClass('change_pass');
+			$('#yjsz').parent().addClass('pass_dlg');
+			$('#yjsz').prev().addClass('change_pass');
+			$('#czwc').parent().addClass('pass_dlg');
 		})
+
 	</script>
 </body>
 </html>

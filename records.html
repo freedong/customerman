@@ -39,8 +39,16 @@
 
 		});
 	</script>
+
 </head>
 <body>
+
+
+	
+
+
+
+
 	<!-- 左边栏floatLeft -->
 	<div class="menu2 l_aside floatLeft">
 		<div class="l_name">
@@ -87,7 +95,7 @@
 		</div>
 		<div class="re_con">
 			<div class="re_con_cz">
-				<h3 class="xhx">条件查询：</h3>
+				<h3 class="xhx">充值：</h3>
 				<div class="re_con_cz1">
 					<label>号码:</label>
 					<input type="text" class="re_input">
@@ -107,8 +115,8 @@
 			</div>
 
 			<div class="re_con_czjl">
-				<h3 class="xhx">条件查询：</h3>
-				<div class="re_table">
+				<h3 class="xhx">充值记录：</h3>
+				<!-- <div class="re_table">
 					<table>
 						<tbody>
 							<tr>
@@ -169,11 +177,54 @@
 							</tr>
 						</tbody>
 					</table>
-				</div>
+				</div> -->
 			</div>
+
+			<div class="re_data">
+			<table id="dg" title="" style="width:960px;height:450px"
+				data-options="rownumbers:true,singleSelect:true,pagination:true,url:'datagrid_data1.json',method:'get'">
+				<thead>
+					<tr>
+						<th data-options="field:'itemid',width:160,height:38,align:'center'">号码</th>
+						<th data-options="field:'productid',width:160,height:38,align:'center'">充值时间</th>
+						<th data-options="field:'listprice',width:140,height:38,align:'center'">充值金额</th>
+						<th data-options="field:'unitcost',width:160,height:38,align:'center'">充值类型</th>
+						<th data-options="field:'attr1',width:151,height:38,align:'center'">余额</th>
+						<th data-options="field:'status',width:161,height:38,align:'center'">备注</th>
+					</tr>
+				</thead>
+			</table>
+			<script type="text/javascript">
+				$(function(){
+			var pager = $('#dg').datagrid().datagrid('getPager');	// get the pager of datagrid
+			pager.pagination({
+				/*buttons:[{
+					iconCls:'icon-search',
+					handler:function(){
+						alert('search');
+					}
+				},{
+					iconCls:'icon-add',
+					handler:function(){
+						alert('add');
+					}
+				},{
+					iconCls:'icon-edit',
+					handler:function(){
+						alert('edit');
+					}
+				}]*/
+			});			
+		})
+	</script>
+</div>
+			
 		</div>
 	</div>
 	<div class="clear"></div>
+
+
+
 
 
 		<!-- 修改密码对话框 -->
